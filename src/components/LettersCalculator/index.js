@@ -4,11 +4,9 @@ import './index.css'
 
 class LettersCalculator extends Component {
   state = {numberOfCharacters: 0}
-
-  charactersCount = () =>
-    this.setState(prevState => ({
-      numberOfCharacters: prevState.numberOfCharacters + 1,
-    }))
+  
+  charactersCount = event =>
+    this.setState({numberOfCharacters: event.target.value.length})
 
   render() {
     const {numberOfCharacters} = this.state
